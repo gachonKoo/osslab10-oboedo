@@ -1,7 +1,7 @@
 name: Autograding Tests
-'on':
+'on':  
 - push
-- repository_dispatch
+- workflow_dispatch
 permissions:
   checks: write
   actions: read
@@ -28,7 +28,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: test1
-        setup-command: ''
+        setup-command: pip install -r requirements.txt
         command: python divisors.py 23
         input: ''
         expected-output: 1 23
