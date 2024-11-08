@@ -8,8 +8,7 @@ permissions:
   contents: read
 jobs:
   run-autograding-tests:
-    runs-on: ubuntu-latest
-    if: github.actor != 'github-classroom[bot]'
+    runs-on: ubuntu-lates
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
